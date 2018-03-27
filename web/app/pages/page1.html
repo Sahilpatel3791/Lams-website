@@ -5,8 +5,8 @@
             <h1>FOR ALL YOUR DAY TO DAY BUSINESS OPERATIONS</h1>
             <div class="row">
                 <div class="col-md-12">
-                    <button class="btn btn-default">Apply For Loan</button>
-                    <button class="btn btn-default">Have any Query?</button>
+                    <button class="btn btn-green">Apply For Loan</button>
+                    <button class="btn btn-datk-blue">Have any Query?</button>
                 </div>
             </div>
         </div>
@@ -47,28 +47,33 @@
 </div>
 <div class="emi-calculate-block">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>EMI Calculator</h3>
+        <div class="row display-flex">
+            <div class="col-md-12 text-center section-title">
+                <h2>EMI Calculator</h2>
             </div>
-            <div class="col-md-6 table-cell text-center">
+            <div class="col-md-6 text-center left">
                 <img src="assets/images/budget.svg" height="300">
             </div>
-            <div class="col-md-6 table-cell calc-block text-center">
+            <div class="col-md-6 calc-block text-center right">
                 <div class="row">
                     <div class="calc text-left">
                         <div class="col-md-12">
-                            <input type="number" class="form-control" placeholder="Principle Amount">
+                            <div class="emi-amount-block">
+                                <h3 class="text-right">EMI</h3>
+                                <p class="text-right">{{(prc/per) + (prc*int/100)/per}}</p>
+                            </div>
                         </div>
                         <div class="col-md-12">
-                            <input type="number" class="form-control" placeholder="Interest Rate">
+                            <input type="number" class="form-control" ng-model="prc" placeholder="Principle Amount">
                         </div>
                         <div class="col-md-12">
-                            <input type="number" class="form-control" placeholder="Perids(Months)">
+                            <input type="number" class="form-control" ng-model="int" placeholder="Interest Rate">
                         </div>
                         <div class="col-md-12">
-                            <button class="btn btn-default">Calculate</button>
-                            <button class="btn btn-default">Reset</button>
+                            <input type="number" class="form-control" ng-model="per" placeholder="Perids(Months)">
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button class="btn btn-default btn-block">Apply</button>
                         </div>
                     </div>
                 </div>

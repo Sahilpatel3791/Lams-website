@@ -67,6 +67,72 @@ html,body{
     width:100%;
 }
 /*************homepage************/
+.single-featured {
+    border: 1px solid #e9e9e9;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.single-featured .icon {
+    background-color: #f7f8fa;
+    width: 85px;
+    float: left;
+    text-align: center;
+    line-height: 180px;
+    border-right: 1px solid #e9e9e9;
+}
+.single-featured .content {
+    padding-left: 115px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 17px;
+    font-weight: 300;
+    padding-right: 20px;
+}
+.single-featured .content h4 {
+    color: #232323;
+    font-weight: 600;
+}
+.single-featured .content p {
+    margin-bottom: 15px;
+}
+.single-featured .content a {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #3a7cdd;
+    transition: .4s;
+}
+.section-title h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #232323;
+}
+.section-title p {
+    color: #666666;
+}
+.contact-block{
+    padding: 40px 0;
+}
+.contact-form{
+    margin: 0;
+}
+.contact-form .form-control{
+    background: #eee;
+    border-radius: 0;
+    border:0;
+    margin-bottom: 20px;
+    box-shadow: none !important;
+}
+.sbmt-btn {
+    height: 50px;
+    border-color: #26bd26;
+    color: white;
+    padding: 10px 50px;
+    background: #26bd26;
+}
+.contact-form input.form-control{
+    height: 50px;
+}
 #imageslider{
     height: 100vh;
     width: 100%
@@ -149,6 +215,20 @@ html,body{
     background-color: #f2f2f2;
     border-top: 1px solid #f2f2f2;
 }
+.btn-green {
+    color: #333;
+    background-color: #26e23d !important;
+    border-color: #26e23d !important;
+    height: 50px;
+    padding: 15px 30px;
+}
+.btn-datk-blue{
+    color: #fff;
+    background-color: #213786 !important;
+    border-color: #213786 !important;
+    height: 50px;
+    padding: 15px 30px;
+}
 .bg-green {
     background: #2fa212;
     border: 1px solid green;
@@ -197,20 +277,31 @@ div#imageslider1 {
     font-weight: normal;
     color: #363636;
 }
-.col-md-6.calc-block {
-    padding: 0px 100px 0px 15px;
-}
 .c-w-block.ng-scope {
     padding: 40px 0;
     background: #f2f2f2;
 }
+.display-flex{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
 .partners-block.ng-scope {
     padding: 40px 0;
+    background: #eee;
 }
-.brdr-btn{
+ul.partners-block-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.brdr-btn {
     background: transparent;
-    border:2px solid white;
-    border-radius: 20px;
+    border: 0;
+    border-radius: 0;
+    padding: 13px 30px;
+    background: #50306F !important;
 }
 i.circle-icon {
     font-size: 50px;
@@ -235,10 +326,10 @@ span.step-num {
     border-radius: 50%;
 }
 /*************product page***********/
-.banner{
-    max-height:700px;
+.banner {
+    max-height: 700px;
     min-height: 500px;
-    background:url(../../assets/images/car-macro-mini-cooper-35967.jpg) no-repeat;
+    background-image: linear-gradient(45deg,#ff1a45,#b236ff);
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -278,35 +369,53 @@ span.step-num {
     margin: 0;
 }
 .emi-calculate-block {
-    padding: 80px 0;
+    padding: 40px 0;
     background: #005aa7;
     background: -webkit-linear-gradient(to right, #005aa7, #fffde4);
-    background: linear-gradient(to right, #005aa7, #fffde4);
+    background: white;
+}
+.emi-calculate-block .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.emi-calculate-block .right{
+    margin-top: 40px;
 }
 .calc {
     max-width: 350px;
-    border: 1px solid #f2f2f2;
     display: inline-block;
-    padding: 25px 10px;
-    border-radius: 6px;
-    background: white;
-    box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+    padding: 40px 15px;
+    /* border-radius: 6px; */
+    background: #818388;
+    box-shadow: 9px 10px 0px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
 }
-.calc .form-control{
+.emi-amount-block h3 {
+    margin-top: 0;
+    font-weight: bold;
+    color: white;
+}
+.calc .form-control {
     height: 40px;
     margin: 10px 0;
-    border:1px solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 0;
     box-shadow: none !important;
+    background: #e8e8e8;
 }
-.calc .btn{
-    height: 40px;
+.calc .btn {
     margin: 10px 0;
-    border:1px solid #ddd;
+    border: 0;
     border-radius: 0;
+    background: #12de51 !important;
+    padding: 15px;
+    color: white;
 }
-.loan-process-block{
+.loan-process-block {
     padding: 40px 0;
+    background: #eee;
 }
 .process-flow{
     width: 100%;
@@ -345,12 +454,12 @@ span.step-num {
 .query-contact-block{
     padding: 40px 0;
 }
-.c-block ul > li,.d-block ul > li,.e-block ul > li {
+.c-block ul > li, .d-block ul > li, .e-block ul > li {
     float: left;
     width: 100%;
     margin-bottom: 10px;
-    padding-left: 40px;
-    background: url(../images/un-oredrlist.svg) no-repeat left 6px;
+    padding-left: 35px;
+    background: url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_33-512.png) no-repeat left 2px;
     background-size: 16px auto;
     font-size: 16px;
     color: #6a6a78;
@@ -418,8 +527,9 @@ span.step-num {
     font-size: 13px;
 }
 /***********benefit**********/
-.benfit-blok{
+.benfit-blok {
     padding: 40px 0;
+    background: #eee;
 }
 .custom-card.text-center {
     padding: 25px;
@@ -459,6 +569,20 @@ ul.about-benefits-list {
 }
 /**********query***********/
 .query-block{
+    padding: 40px 0;
+}
+.faq-block .panel-default{
+    border-radius: 0;
+    border-color: #42519a;
+}
+.faq-block .panel-default > .panel-heading {
+    color: #fff;
+    background-color: #42519a;
+    border-color: #42519a;
+    padding: 20px 15px !important;
+    border-radius: 0;
+}
+.faq-block{
     padding: 40px 0;
 }
 /**********custom***********/
