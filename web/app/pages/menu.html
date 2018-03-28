@@ -10,9 +10,16 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li>
-                    <a ui-sref="menu.page1">Product</a>
+                <li class="active"><a ui-sref="menu.home">Home</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle">Product</a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="menu.page1">Home Loan</a></li>
+                        <li><a ui-sref="menu.carloan">Car Loan</a></li>
+                        <li><a ui-sref="menu.loanagaistproperty">Loan Against Property</a></li>
+                        <li><a ui-sref="menu.personalloan">personal Loan</a></li>
+                        <li><a ui-sref="menu.educationloan">Education Loan</a></li>
+                    </ul>
                 </li>
                 <li><a ui-sref="menu.partnerspage">Partners</a></li> 
                 <li><a ui-sref="menu.aboutus">About Us</a></li> 

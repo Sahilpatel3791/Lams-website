@@ -5,7 +5,7 @@ var lams = angular.module('lams',
         [
             'ui.router'
         ]);
-        
+
 lams.config(["$stateProvider", "$controllerProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $controllerProvider, $urlRouterProvider, $locationProvider) {
 
         angular.module("lams").controller = $controllerProvider.register;
@@ -21,8 +21,20 @@ lams.config(["$stateProvider", "$controllerProvider", "$urlRouterProvider", "$lo
             url: 'home',
             templateUrl: 'app/pages/home.html'
         }).state('menu.page1', {
-            url: 'page1',
+            url: 'HomeLoan',
             templateUrl: 'app/pages/page1.html'
+        }).state('menu.carloan', {
+            url: 'CarLoan',
+            templateUrl: 'app/pages/carloan.html'
+        }).state('menu.loanagaistproperty', {
+            url: 'LoanAgainstProperty',
+            templateUrl: 'app/pages/loanagaistproperty.html'
+        }).state('menu.educationloan', {
+            url: 'EducationLoan',
+            templateUrl: 'app/pages/educationloan.html'
+        }).state('menu.personalloan', {
+            url: 'PersonalLoan',
+            templateUrl: 'app/pages/personalloan.html'
         }).state('menu.partnerspage', {
             url: 'partnerspage',
             templateUrl: 'app/pages/partners.html'

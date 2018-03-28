@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.goog leapis.com/css?family=Poppins:300,500,600,900');
 *{
     outline:0;
 }
 html,body{
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 /**********navbar**********/
 .item img:after{
@@ -33,6 +33,16 @@ html,body{
 .topNavbar.active-nav{
     background: white;
     box-shadow: 1px 0px 6px rgba(0,0,0,0.08);
+}
+.topNavbar .open a{
+    background: transparent !important;
+}
+.topNavbar .dropdown-menu{
+    border-radius: 4px !important;
+    border:1px solid #f2f2f2;
+}
+.topNavbar .dropdown-menu a{
+    color: #333 !important;
 }
 .navbar-nav{
     height: 100%;
@@ -67,6 +77,16 @@ html,body{
     width:100%;
 }
 /*************homepage************/
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
 .single-featured {
     border: 1px solid #e9e9e9;
     overflow: hidden;
@@ -75,7 +95,7 @@ html,body{
 }
 .single-featured .icon {
     background-color: #eee;
-    width: 85px;
+    width:100px;
     float: left;
     text-align: center;
     line-height: 180px;
@@ -86,7 +106,7 @@ html,body{
     justify-content: center;
 }
 .single-featured .content {
-    padding-left: 115px;
+    padding-left: 120px;
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 17px;
@@ -162,14 +182,14 @@ p.sub-title {
     top: 50%;
     width: 5%;
     font-size: 20px;
-    color: #fff;
+    color: #363636;
     text-align: center;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    text-shadow: none;
     background-color: transparent;
     filter: alpha(opacity=50);
     opacity: 1;
     text-align: center;
-    background: transparent !important;
+    background: #fff !important;
     transform: translateY(-50%);
     /* padding: 20px 15px !important; */
     border-radius: 50%;
@@ -198,21 +218,31 @@ p.sub-title {
 }
 .carousel-caption {
     padding-bottom: 30px;
-    max-width: 700px;
+    max-width: 990px;
     text-align: left;
     padding: 15px;
-    margin: auto;
-    right: 0;
-    bottom: 35%;
+    margin: 0 auto;
+    /* right: 0; */
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
 }
 .carousel-caption h1,.carousel-caption p{
     color: #fff !important;
     text-shadow:none !important;
     margin: 5px 0 !important;
 }
-.carousel-caption p{
-    margin: 15px 0 !important;
+.carousel-caption h1 {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    margin-bottom: 10px !important;
 }
+.carousel-caption p{
+    margin: 0 0 20px !important;
+    font-size: 16px;
+}
+
 .carousel-caption .btn{
     border-color: #fff !important;
     color: #fff !important;
@@ -312,9 +342,9 @@ ul.partners-block-list{
 .brdr-btn {
     background: transparent;
     border: 0;
-    border-radius: 0;
     padding: 13px 30px;
-    background: #50306F !important;
+    background: #ff9900 !important;
+    box-shadow: none !important;
 }
 i.circle-icon {
     font-size: 50px;
@@ -339,15 +369,27 @@ span.step-num {
     border-radius: 50%;
 }
 /*************product page***********/
+.col-md-6.emi-right.text-center {
+    padding: 60px 0;
+}
+.p-relative{
+    position: relative;
+}
 .banner {
     max-height: 700px;
     min-height: 500px;
-    background-image: linear-gradient(45deg,#ff1a45,#b236ff);
     background-size: cover;
     background-position: center center;
     display: flex;
     align-items: center;
     background-attachment: fixed;
+    position: relative;
+}
+.banner.partners{
+    background-image: url('../../assets/images/adults-agreement-beverage-567633.jpg');
+}
+.banner.aboutUs{
+    background-image: url('../../assets/images/business-confidence-corporate-776615.jpg');
 }
 .banner h1{
     font-size: 46px;
@@ -379,11 +421,35 @@ span.step-num {
     padding: 60px 0;
 }
 .emi-blok{
-    padding: 60px 0;
+    
+}
+.emi-blok .emi-left{
     background: url('../../assets/images/calc-bg.jpg') no-repeat;
     background-size: cover;
     position: relative;
     z-index: 1;
+}
+.col-md-6.emi-right.text-center {
+    display: table-cell;
+    text-align: center;
+    width: 50%;
+    float: none;
+    background: #eee;
+}
+.emi-blok .emi-left {
+    background: url(../../assets/images/calc-bg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    padding: 60px 0;
+    display: table-cell;
+    width: 50%;
+    float: none;
+}
+.display-table{
+    display: table;
+    width: 100%;
 }
 .emi-blok:after{
     content: "";
@@ -445,8 +511,8 @@ span.step-num {
     color: #666;
 }
 .about-loan-block h3 {
-    color: #e931ff;
-    font-size: 18px;
+    color: #8c47a9;
+    font-size: 24px;
     margin: 0;
     font-weight: bold;
 }
@@ -552,9 +618,9 @@ li.process-box-partners{
     float: left;
     width: 100%;
     margin-bottom: 10px;
-    padding-left: 35px;
-    background: url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_33-512.png) no-repeat left 2px;
-    background-size: 16px auto;
+    padding-left: 33px;
+    background: url('../../assets/images/tick-inside-circle.png') no-repeat left 2px;
+    background-size: 19px auto;
     font-size: 16px;
     color: #6a6a78;
     font-weight: 400;
@@ -564,9 +630,9 @@ ul.check-list > li {
     float: left;
     width: 100%;
     margin-bottom: 10px;
-    padding-left: 35px;
-    background: url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_33-512.png) no-repeat left 2px;
-    background-size: 16px auto;
+    padding-left: 33px;
+    background: url('../../assets/images/tick-inside-circle.png') no-repeat left 2px;
+    background-size: 19px auto;
     font-size: 16px;
     color: #6a6a78;
     font-weight: 400;
