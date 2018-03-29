@@ -1,9 +1,9 @@
-@import url('https://fonts.goog leapis.com/css?family=Poppins:300,500,600,900');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
 *{
     outline:0;
 }
 html,body{
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Noto Sans', sans-serif !important;
 }
 /**********navbar**********/
 .item img:after{
@@ -30,9 +30,9 @@ html,body{
     display:flex;
     align-items: center;
 }
-.topNavbar.active-nav{
+.topNavbar.active-nav {
     background: white;
-    box-shadow: 1px 0px 6px rgba(0,0,0,0.08);
+    box-shadow: 1px 0px 9px rgba(0, 0, 0, 0.42);
 }
 .topNavbar .open a{
     background: transparent !important;
@@ -59,6 +59,7 @@ html,body{
     color:white !important;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .navbar-nav > li.active a{
     background: transparent !important;
@@ -77,7 +78,31 @@ html,body{
     width:100%;
 }
 /*************homepage************/
-
+.carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-inner .item,
+.carousel-inner .active.left,
+.carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-inner .active,
+.carousel-inner .next.left,
+.carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-inner .next,
+.carousel-inner .prev,
+.carousel-inner .active.left,
+.carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+          transform: translate3d(0, 0, 0) !important;
+}
+.carousel-control {
+  z-index: 2;
+}
 .overlay {
     position: absolute;
     height: 100%;
@@ -91,7 +116,7 @@ html,body{
     border: 1px solid #e9e9e9;
     overflow: hidden;
     margin-bottom: 30px;
-    height: 200px;
+    height: 170px;
 }
 .single-featured .icon {
     background-color: #eee;
@@ -114,11 +139,13 @@ html,body{
     padding-right: 20px;
 }
 .single-featured .content h4 {
-    color: #232323;
-    font-weight: 600;
+    color: #333;
+    font-weight: 400;
 }
 .single-featured .content p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #363636;
 }
 .single-featured .content a {
     text-transform: uppercase;
@@ -155,10 +182,10 @@ p.sub-title {
 }
 .sbmt-btn {
     height: 50px;
-    border-color: #26bd26;
+    border-color: #c543ff;
     color: white;
     padding: 10px 50px;
-    background: #26bd26;
+    background: #c543ff !important;
 }
 .contact-form input.form-control{
     height: 50px;
@@ -176,13 +203,32 @@ p.sub-title {
     left:0;
     background: red;
 }
+#imageslider .carousel-indicators li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #a44685;
+    border-radius: 10px;
+}
+#imageslider .carousel-indicators .active {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    background-color: #a44685;
+    border-color: #e2dede;
+}
 .carousel-control {
     position: absolute;
     bottom: initial;
     top: 50%;
     width: 5%;
     font-size: 20px;
-    color: #363636;
+    color: #a44685 !important;
     text-align: center;
     text-shadow: none;
     background-color: transparent;
@@ -243,10 +289,13 @@ p.sub-title {
     font-size: 16px;
 }
 
-.carousel-caption .btn{
+.carousel-caption .btn {
     border-color: #fff !important;
     color: #fff !important;
     background: gray;
+    margin-top: 15px;
+    background: #a44685 !important;
+    font-weight: bold;
 }
 .panel.panel-default.product-box {
     border: 1px solid #f2f2f2;
@@ -255,12 +304,29 @@ p.sub-title {
     background-color: #f2f2f2;
     border-top: 1px solid #f2f2f2;
 }
+ul.dropdown-menu.arrow-dropdown.left:after {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+    bottom: 100%;
+    left: 31px;
+}
+ul.dropdown-menu.arrow-dropdown.right:after {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+    bottom: 100%;
+    right: 20px;
+}
 .btn-green {
-    color: #333;
-    background-color: #26e23d !important;
-    border-color: #26e23d !important;
+    color: #fff !important;
+    background-color: #a44685 !important;
+    border-color: #a44685 !important;
     height: auto;
     padding: 12px 30px;
+    font-weight: bold;
 }
 .btn-datk-blue{
     color: #fff;
@@ -286,15 +352,18 @@ p.sub-title {
     box-shadow: none !important;
     border-radius: 0;
 }
-.calc-block .custom-btn{
-    height:40px;
-    border:1px solid #005aa7;
-    margin-top: 5px;
+.calc-block .custom-btn {
+    height: 40px;
+    border: 1px solid #c543ff;
+    margin-top: 10px;
     margin-bottom: 15px;
     box-shadow: none !important;
     border-radius: 0;
-    background: #005aa7;
+    background: #c543ff;
     color: white;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: bold;
 }
 i.fa.fa-check {
     margin-top: 0px;
@@ -378,11 +447,10 @@ span.step-num {
 .banner {
     max-height: 700px;
     min-height: 500px;
-    background-size: cover;
+    background-size: 100% !important;
     background-position: center center;
     display: flex;
     align-items: center;
-    background-attachment: fixed;
     position: relative;
 }
 .banner.partners{
@@ -390,6 +458,21 @@ span.step-num {
 }
 .banner.aboutUs{
     background-image: url('../../assets/images/business-confidence-corporate-776615.jpg');
+}
+.banner.carloan{
+    background-image: url('../../assets/images/car-loan.jpg');
+}
+.banner.educationloan{
+    background-image: url('../../assets/images/Education-load.jpg');
+}
+.banner.loanagainstproperty{
+    background-image: url('../../assets/images/loan-against-property.jpg');
+}
+.banner.homeloan{
+    background-image: url('../../assets/images/home-load.jpg');
+}
+.banner.personalloan{
+    background-image: url('../../assets/images/personal-loan.jpg');
 }
 .banner h1{
     font-size: 46px;
@@ -406,6 +489,7 @@ span.step-num {
 }
 .banner-caption {
     text-align: center;
+    position: relative;
 }
 .about-loan-block{
     padding: 60px 0;
@@ -415,13 +499,13 @@ span.step-num {
     background: #eee;
 }
 .process-block {
-    padding: 60px 0 85px;
+    padding: 60px 0;
 }
 .w-v-block {
     padding: 60px 0;
 }
 .emi-blok{
-    
+
 }
 .emi-blok .emi-left{
     background: url('../../assets/images/calc-bg.jpg') no-repeat;
@@ -477,21 +561,22 @@ span.step-num {
 .calc-box .btn {
     padding: 15px;
     width: 100%;
-    background: #5039af;
-    border-color: #5b47cc;
+    background: #993ec2;
+    border-color: #993ec2;
     margin: 10px 0;
     border-radius: 0;
     color: white;
+    font-weight: bold;
 }
 .loan-process-block ul > li,.w-v-block ul > li {
     float: left;
     width: 100%;
     margin-bottom: 10px;
-    padding-left: 35px;
-    background: url(https://cdn3.iconfinder.com/data/icons/buttons/512/Icon_33-512.png) no-repeat left 2px;
-    background-size: 16px auto;
+    padding-left: 33px;
+    background: url('../../assets/images/tick-inside-circle.png') no-repeat left 2px;
+    background-size: 19px auto;
     font-size: 16px;
-    color: #333;
+    color: #6a6a78;
     font-weight: 400;
 }
 .process-box p {
@@ -499,10 +584,12 @@ span.step-num {
     font-size: 16px;
 }
 .about-loan-block p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
-    color: #000;
+    color: #8e8e8e;
     margin: 10px 0 0;
+    font-weight: 300;
+    clear: both;
 }
 .about-loan-block h2 {
     margin: 15px 0;
@@ -515,15 +602,20 @@ span.step-num {
     font-size: 24px;
     margin: 0;
     font-weight: bold;
+    border-bottom: 2px solid #8c47a9;
+    float: left;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
 }
 ul.list-unstyled.process-list {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 30px;
 }
 li.process-box {
-    border: 1px solid #eee;
+    border: 1px solid #eeeeee;
     padding: 40px 15px;
     width: 200px;
     text-align: center;
@@ -540,21 +632,24 @@ li.process-box {
     background: #eee;
 }
 h1.half-block-title {
-    font-size: 22px;
-    color: #777;
+    font-size: 24px;
+    color: #484848;
     margin-bottom: 20px;
     margin-top: 0;
 }
 .product-query-block button.btn.btn-default {
     padding: 15px 45px;
     border-radius: 0;
-    border: 2px solid #ddd;
-    background: white;
+    border: 2px solid #993ec2;
+    background: #993ec2;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
 }
 h1.block-title {
     font-size: 36px;
     color: #363636;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 0;
 }
 span.count-box {
@@ -562,15 +657,15 @@ span.count-box {
     width: 50px;
     position: absolute;
     bottom: -25px;
-    background: #fff;
-    line-height: 50px;
+    background: #993ec2;
+    line-height: 36px;
     text-align: center;
     border-radius: 50%;
     font-size: 16px;
     font-weight: bold;
     color: #eee;
-    color: #000;
-    border: 1px solid #eee;
+    color: #fff;
+    border: 8px solid #fff;
 }
 /************partners**********/
 .c-block{
@@ -592,8 +687,11 @@ span.count-box {
 .query-contact-block button.btn.btn-default {
     padding: 15px 45px;
     border-radius: 0;
-    border: 2px solid #ddd;
-    background: white;
+    border: 2px solid #983cc1;
+    background: #983cc1;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
 }
 ul.process-list-partners {
     margin: 0;
@@ -602,7 +700,7 @@ ul.process-list-partners {
     justify-content: center;
 }
 li.process-box-partners{
-    border: 1px solid #eee;
+    border: 1px solid #eeeeee;
     padding: 40px 15px;
     width: 130px;
     text-align: center;
@@ -637,6 +735,11 @@ ul.check-list > li {
     color: #6a6a78;
     font-weight: 400;
 }
+ul.check-list > li p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #444;
+}
 .borrowrs-block{
     padding: 60px 0;
     background:#eee;
@@ -657,9 +760,13 @@ ul.check-list > li {
     display: inline-block;
     border-radius: 4px;
     width: 100%;
-    background: white;
+    background: #eeeeee;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-    padding: 15px;
+    padding: 20px 15px 10px;
+}
+.custom-card h3 {
+    margin: 0 0 10px;
+    color: #363636;
 }
 .t-w-h-block > li {
     max-width: 350px;
@@ -715,14 +822,14 @@ ul.check-list > li {
 .custom-card img{
     margin-bottom: 20px;
 }
-.custom-card p{
+.custom-card p {
     font-size: 14px;
-    color: #363636;
+    color: #757272;
 }
 .about-benefit-block{
     padding: 60px 0;
     background: #f2f2f2;
-    
+
 }
 ul.about-benefits-list {
     padding-left: 0;
@@ -748,17 +855,21 @@ ul.about-benefits-list {
 }
 .faq-block .panel-default{
     border-radius: 0;
-    border-color: #42519a;
+    border-color: #a84887;
 }
 .faq-block .panel-default > .panel-heading {
     color: #fff;
-    background-color: #42519a;
-    border-color: #42519a;
+    background-color: #a84887;
+    border-color: #a84887 !important;
     padding: 20px 15px !important;
     border-radius: 0;
 }
-.faq-block{
-    padding: 40px 0;
+.faq-block .panel-default > .panel-body{
+    font-size: 16px;
+}
+.faq-block {
+    padding: 60px 0;
+    background: #eee;
 }
 /**********custom***********/
 .custom-btn{

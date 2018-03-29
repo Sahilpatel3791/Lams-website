@@ -6,14 +6,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span> 
             </button>
-            <a class="navbar-brand" href="#"><img src="assets/images/logo.jpg" height="50"></a>
+            <a class="navbar-brand" href="#"><img src="assets/images/logoq12.png" height="50"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a ui-sref="menu.home">Home</a></li>
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">Product</a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu arrow-dropdown left">
                         <li><a ui-sref="menu.page1">Home Loan</a></li>
                         <li><a ui-sref="menu.carloan">Car Loan</a></li>
                         <li><a ui-sref="menu.loanagaistproperty">Loan Against Property</a></li>
@@ -25,7 +25,11 @@
                 <li><a ui-sref="menu.aboutus">About Us</a></li> 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
+                <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Login</a>
+                    <ul class="dropdown-menu arrow-dropdown right">
+                        <li><a href="http://13.250.216.146:8080/#!/login">Login as Borrower</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -37,7 +41,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h3><a href="#"><img src="assets/images/logo.jpg" height="50"></a></h3>
+                <h3><a href="#"><img src="assets/images/logoq12.png" height="50"></a></h3>
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC  .</p> 
             </div>
             <div class="col-md-3">
@@ -83,5 +87,8 @@
         {
             $('.topNavbar').removeClass('active-nav');
         }
+    })
+    $('#myNavbar a').not('a.dropdown-toggle').click(function(){
+        $('html,body').scrollTop(0);
     })
 </script>
