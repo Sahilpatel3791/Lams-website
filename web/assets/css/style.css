@@ -18,7 +18,7 @@ html,body{
 .topNavbar {
     height: 90px;
     border-radius: 0;
-    background: transparent;
+    background: white;
     border:0;
     position: fixed;
     width: 100%;
@@ -29,11 +29,9 @@ html,body{
     transition: .2s ease-in;
     display:flex;
     align-items: center;
-}
-.topNavbar.active-nav {
-    background: white;
     box-shadow: 1px 0px 9px rgba(0, 0, 0, 0.42);
 }
+
 .topNavbar .open a{
     background: transparent !important;
 }
@@ -50,13 +48,11 @@ html,body{
 .navbar-nav > li{
     height: 100%;
 }
-.topNavbar.active-nav .navbar-nav > li a{
-    color: #333 !important;
-}
+
 .navbar-nav > li a{
     height: 100%;
     line-height: 30px;
-    color:white !important;
+    color:#333 !important;
     display: flex;
     align-items: center;
     cursor: pointer;
