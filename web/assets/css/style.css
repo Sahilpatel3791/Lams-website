@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
 *{
     outline:0;
+    text-decoration: none !important;
 }
 html,body{
     font-family: 'Noto Sans', sans-serif !important;
@@ -29,7 +30,7 @@ html,body{
     transition: .2s ease-in;
     display:flex;
     align-items: center;
-    box-shadow: 1px 0px 9px rgba(0, 0, 0, 0.42);
+    box-shadow: 0 0 20px 0px rgba(64, 64, 64, 0.16);
 }
 
 .topNavbar .open a{
@@ -789,19 +790,19 @@ ul.check-list > li p {
 }
 /************footer************/
 .footer{
-    background: rgba(0,0,0,0.8);
+    background: background: linear-gradient(white,#eaebed);;
     padding: 40px 0;
 }
-.footer h3{
-    font-size:18px;
-    color:white;
+.footer h3 {
+    font-size: 18px;
+    color: #333;
 }
-.footer ul li a{
-    font-size: 11px;
-    color: white;
+.footer ul li a {
+    font-size: 12px;
+    color: #333;
 }
-.footer p{
-    color: white;
+.footer p {
+    color: #333;
     font-size: 13px;
 }
 /***********benefit**********/
@@ -849,23 +850,30 @@ ul.about-benefits-list {
 .query-block{
     padding: 40px 0;
 }
-.faq-block .panel-default{
-    border-radius: 0;
-    border-color: #a84887;
+.faq-block .panel-default {
+    border-radius: 6px;
+    border-color: transparent;
 }
 .faq-block .panel-default > .panel-heading {
-    color: #fff;
-    background-color: #a84887;
-    border-color: #a84887 !important;
+    color: #031633;
+    background-color: #eaebed;
+    border-color: #eaebed !important;
     padding: 20px 15px !important;
-    border-radius: 0;
+    border-radius: 8px;
 }
-.faq-block .panel-default > .panel-body{
+.faq-block .panel-default .panel-body{
     font-size: 16px;
+    line-height: 27px;
+    border: 0;
+    color: #555555;
+    background-color: #eaebed;
+    border-radius: 8px;
+    padding: 22px 23px;
+    margin-top: 10px;
 }
 .faq-block {
     padding: 60px 0;
-    background: #eee;
+    background: #fff;
 }
 /**********custom***********/
 .custom-btn{
