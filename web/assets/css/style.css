@@ -790,7 +790,7 @@ ul.check-list > li p {
 }
 /************footer************/
 .footer{
-    background: background: linear-gradient(white,#eaebed);;
+    background: linear-gradient(white,#eaebed);
     padding: 40px 0;
 }
 .footer h3 {
@@ -853,6 +853,7 @@ ul.about-benefits-list {
 .faq-block .panel-default {
     border-radius: 6px;
     border-color: transparent;
+    box-shadow: none !important;
 }
 .faq-block .panel-default > .panel-heading {
     color: #031633;

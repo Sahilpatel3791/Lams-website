@@ -14,41 +14,17 @@
             </div>
             <div class="col-md-12">
                 <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" ng-repeat="v in faq.borrower">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".collapse1">
-                                    What are the types of loans that Borrower can avail through VfinanceS support?</a>
-                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion" href="#collapse1">
+                                <a data-toggle="collapse" data-parent="#accordion" href=".collapse{{$index}}">
+                                    {{v.que}}</a>
+                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion" href=".collapse{{$index}}">
                                     <i class="fa fa-plus"></i></a>
                             </h4>
                         </div>
-                        <div id="collapse1" class="panel-collapse collapse in">
-                            <div class="panel-body">Borrower can avail various types of loans through VfinanceS support that includes Home Loans, Loan Against Properties, Secured Business Loans, Working Capital Loans, Education Loans, Car Loans, Overdraft Facilities, Dropline Overdraft Facilities, Bank Guarantee, CC Facilities, Term Loans, Loans Against FDs, Loan Against Securities, Project Finance, Private Equity Finance, Gold Loans, Other loan types. We are in the process to continuous improve our platform to enable easy access to all financial requirements for the borrowers.</div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                                    Why should VfinanceS be used to apply for loans?</a>
-                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion" href="#collapse1"><i class="fa fa-plus"></i></a>
-                            </h4>
-                        </div>
-                        <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-body">There are multiple reasons to join VfinanceS including – 1 Form – multiple lenders – multiple loans, Just 1 click to approach multiple lenders to avail funds, Easy decision making as now you don’t need to run behind lenders but lenders approach you directly through our platform, Transparent process, Completely paperless Application, Completely free platform to use, Time saving, etc.</div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                                    Who will be the lenders for the Loans?</a>
-                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion" href="#collapse1"><i class="fa fa-plus"></i></a>
-                            </h4>
-                        </div>
-                        <div id="collapse3" class="panel-collapse collapse">
-                            <div class="panel-body">We are currently partnered with various Banks, NBFCs and Financial Institutions. However we are in the process to continuously keep including various Lenders on our platform.</div>
+                        <div id="collapse1" class="panel-collapse collapse collapse{{$index}}">
+                            <div class="panel-body">{{v.ans}}</div>
                         </div>
                     </div>
                 </div>
@@ -59,50 +35,38 @@
                 <h1 class="block-title">Lenders</h1>
             </div>
             <div class="col-md-12">
-                <div class="panel-group" id="accordion">
-                    <div class="panel panel-default">
+                <div class="panel-group" id="accordion1">
+                    <div class="panel panel-default" ng-repeat="l in faq.lender">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".collapse1">
-                                    Collapsible Group 1</a>
-                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion" href="#collapse1"><i class="fa fa-plus"></i></a>
+                                <a data-toggle="collapse" data-parent="#accordion1" href=".lender{{$index}}">
+                                    {{l.que}}</a>
+                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion1" href=".lender{{$index}}"><i class="fa fa-plus"></i></a>
                             </h4>
                         </div>
-                        <div id="collapse1" class="panel-collapse collapse in collapse1">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat.</div>
+                        <div id="collapse1" class="panel-collapse collapse lender{{$index}}">
+                            <div class="panel-body">{{l.ans}}</div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
+                </div>
+            </div>
+        </div>
+        <div class="row mrgn-top-35">
+            <div class="col-md-12">
+                <h1 class="block-title">Channel Partners</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="panel-group" id="accordion2">
+                    <div class="panel panel-default" ng-repeat="c in faq.channelpartners"> 
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".collapse2">
-                                    Collapsible Group 2</a>
-                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion" href="#collapse1"><i class="fa fa-plus"></i></a>
+                                <a data-toggle="collapse" data-parent="#accordion2" href=".channel{{$index}}">
+                                    {{c.que}}</a>
+                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion2" href=".channel{{$index}}"><i class="fa fa-plus"></i></a>
                             </h4>
                         </div>
-                        <div id="collapse2" class="panel-collapse collapse collapse2">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat.</div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href=".collapse3">
-                                    Collapsible Group 3</a>
-                                <a data-toggle="collapse" class="pull-right" data-parent="#accordion" href="#collapse1"><i class="fa fa-plus"></i></a>
-                            </h4>
-                        </div>
-                        <div id="collapse3" class="panel-collapse collapse collapse3">
-                            <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                commodo consequat.</div>
+                        <div id="collapse1" class="panel-collapse collapse channel{{$index}}">
+                            <div class="panel-body">{{c.ans}}</div>
                         </div>
                     </div>
                 </div>

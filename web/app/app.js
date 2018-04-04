@@ -43,6 +43,7 @@ lams.config(["$stateProvider", "$controllerProvider", "$urlRouterProvider", "$lo
             templateUrl: 'app/pages/aboutus.html'
         }).state('menu.faq', {
             url: 'faq',
-            templateUrl: 'app/pages/faq.html'
+            templateUrl: 'app/pages/faq.html',
+            controller:'faqcontroller'
         });
     }]);
