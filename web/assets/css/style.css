@@ -471,6 +471,9 @@ span.step-num {
 .banner.personalloan{
     background-image: url('../../assets/images/personal-loan.jpg');
 }
+.banner.faq{
+    background-image: url('../../assets/images/ask-blackboard-chalk-board-356079.jpg');
+}
 .banner h1{
     font-size: 46px;
     margin  : 5px 0 15px;
@@ -883,4 +886,11 @@ ul.about-benefits-list {
 }
 .mrgn-top-35{
     margin-top: 35px;
+}
+.contact-footer{
+    margin-top: 20px;
+}
+.contact-footer li{
+    font-size: 14px;
+    margin-bottom: 10px;
 }
