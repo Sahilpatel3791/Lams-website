@@ -22,18 +22,32 @@ html,body{
     border-radius: 0;
     background: white;
     border:0;
-    position: fixed;
+    position: relative;
     width: 100%;
     top:0;
     left:0;
     right:0;
     z-index:1100;
-    transition: .2s ease-in;
     display:flex;
     align-items: center;
     box-shadow: 0 0 20px 0px rgba(64, 64, 64, 0.16);
+    margin-bottom: 0 !important;
+    transition: position 10s;
 }
-
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: smoothScroll .5s forwards;
+}
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-90px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 .topNavbar .open a{
     background: transparent !important;
 }
@@ -123,7 +137,7 @@ html,body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.75);
     z-index: 0;
     top: 0;
     left: 0;
@@ -207,7 +221,7 @@ p.sub-title {
     height: 50px;
 }
 #imageslider{
-    height: 100vh;
+    height: 500px;
     width: 100%
 }
 #imageslider .carousel-inner > .item > img:after{
@@ -289,6 +303,9 @@ p.sub-title {
     transform: translateY(-50%);
     bottom: initial;
 }
+.carousel-caption h3{
+    line-height: 35px;
+}
 .carousel-caption h1,.carousel-caption p{
     color: #fff !important;
     text-shadow:none !important;
@@ -301,10 +318,25 @@ p.sub-title {
     margin-bottom: 10px !important;
 }
 .carousel-caption p{
-    margin: 0 0 20px !important;
+    margin: 0 0 10px !important;
     font-size: 16px;
 }
-
+.sub-footer p {
+    color: #5a5a5a;
+    font-size: 14px;
+    margin: 6px 0;
+}
+.sub-footer{
+    background: rgba(0,0,0,0.9);
+    padding: 5px 0;
+}
+.social-icon-footer{
+    margin:5px 0;
+}
+.social-icon-footer a{
+    color:gray;
+    font-size: 14px;
+}
 .carousel-caption .btn {
     border-color: #fff !important;
     color: #fff !important;
@@ -460,9 +492,12 @@ span.step-num {
 .p-relative{
     position: relative;
 }
+.contact-inner-block.ng-scope {
+    padding: 60px 0;
+}
 .banner {
-    max-height: 700px;
-    min-height: 500px;
+    max-height: 300px;
+    min-height: 300px;
     background-size: 100% !important;
     background-position: center center;
     display: flex;
@@ -749,6 +784,9 @@ li.process-box-partners{
     font-weight: 400;
 }
 /**************aboutus***********/
+.benefits-box{
+    margin-top: 25px;
+}
 ul.check-list > li {
     float: left;
     width: 100%;
@@ -818,7 +856,7 @@ ul.check-list > li p {
 }
 /************footer************/
 .footer{
-    background: linear-gradient(white,#eaebed);
+    background: white;
     padding: 40px 0;
 }
 .footer h3 {

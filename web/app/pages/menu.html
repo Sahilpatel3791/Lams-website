@@ -14,7 +14,7 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle">Product</a>
                     <ul class="dropdown-menu arrow-dropdown left">
-                        <li><a ui-sref="menu.page1">Home Loan</a></li>
+                        <li><a ui-sref="menu.page1" href="javascript:void(0)">Home Loan</a></li>
                         <li><a ui-sref="menu.carloan">Car Loan</a></li>
                         <li><a ui-sref="menu.loanagaistproperty">Loan Against Property</a></li>
                         <li><a ui-sref="menu.personalloan">Personal Loan</a></li>
@@ -22,7 +22,7 @@
                     </ul>
                 </li>
                 <li><a ui-sref="menu.partnerspage">Channel Partners</a></li> 
-                 <li><a ui-sref="menu.partnerspage">Contact Us</a></li>
+                <li><a ui-sref="menu.contactus">Contact Us</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown"><a data-toggle="dropdown" class="dropdown-toggle">Login</a>
@@ -41,7 +41,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <h3><a href="#"><img src="assets/images/logoq12.png" height="50"></a></h3>
+                <h3><a><img src="assets/images/VfinanceSLogo.png" height="50"></a></h3>
                 <p>This is the one of its kind platform that enables borrowers connect with all lenders in just few clicks for all the loans required. Very transparent, easy to use and most importantly a free platform to use.</p> 
             </div>
             <div class="col-md-2">
@@ -58,16 +58,16 @@
                 <ul class="list-unstyled">
                     <li><h3>Pages</h3></li>
                     </li> 
-                 <li>
+                    <li>
                     <li><a ui-sref="menu.home">Home</a></li>
                     <li><a ui-sref="menu.partnerspage">Channel Partners</a></li>
                     <li><a ui-sref="menu.aboutus">About Us</a></li>
                     <li><a ui-sref="menu.faq">FAQ's</a></li>
-                    <li><a ui-sref="menu.partnerspage">Contact Us</a></li>
+                    <li><a ui-sref="menu.contactus">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
-                    <ul class="list-unstyled">
+                <ul class="list-unstyled">
                     <li><h3>Social</h3></li>
                     <li><a href="">Facebook</a></li>
                     <li><a href="">Twitter</a></li>
@@ -76,9 +76,26 @@
                 </ul>
             </div>
             <div class="col-md-3">
-                    <ul class="list-unstyled contact-footer">
-                        <li><i class="fa fa-whatsapp"></i>&nbsp;&nbsp;+91 9769572214 / <br>+91 9850849809</li>
-                        <li><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;info@vfinances.in</li>
+                <ul class="list-unstyled contact-footer">
+                    <li><i class="fa fa-whatsapp"></i>&nbsp;&nbsp;+91 9769572214 / <br>+91 9850849809</li>
+                    <li><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;info@vfinances.in</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sub-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <p>All Right Reserved 2018 © Vfinance.</p>
+            </div>
+            <div class="col-md-5">
+                <ul class="list-inline list-unstyled text-right social-icon-footer">
+                    <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-skype" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -87,7 +104,5 @@
 
 
 <script>
-    $('#myNavbar a').not('a.dropdown-toggle').click(function(){
-        $('html,body').scrollTop(0);
-    })
+    
 </script>

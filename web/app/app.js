@@ -44,6 +44,15 @@ lams.config(["$stateProvider", "$controllerProvider", "$urlRouterProvider", "$lo
         }).state('menu.faq', {
             url: 'faq',
             templateUrl: 'app/pages/faq.html',
-            controller:'faqcontroller'
+            controller: 'faqcontroller'
+        }).state('menu.contactus', {
+            url: 'contactus',
+            templateUrl: 'app/pages/contactus.html'
         });
     }]);
+
+angular.module('lams').run(function ($rootScope) {
+    $rootScope.$on('$stateChangeSuccess', function () {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
+});

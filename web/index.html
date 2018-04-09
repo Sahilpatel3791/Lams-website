@@ -33,6 +33,14 @@
                 duration: 400,
                 easing: 'ease-in-sine'
             });
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 90) {
+                    $('.topNavbar').addClass('fixed');
+                } else
+                {
+                    $('.topNavbar').removeClass('fixed');
+                }
+            });
         })
     </script>
 </body>
