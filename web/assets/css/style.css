@@ -962,6 +962,9 @@ ul.about-benefits-list {
     width: 80%;
 }
 @media screen and (max-width:768px){
+    .topNavbar {
+        position: fixed;
+    }
     li.process-box{
         margin-bottom: 30px;
     }
@@ -978,6 +981,7 @@ ul.about-benefits-list {
     .menu-toggle-btn{
         border:0;
         margin-top: 15px;
+        background: transparent !important;
     }
     .icon-bar{
         background-color: #a44685 !important;
@@ -1011,5 +1015,116 @@ ul.about-benefits-list {
     }
     .faq-block {
         padding: 30px 0;
+    }
+    li.process-box-partners {
+        margin: 15px 5px;
+    }
+    .c-block {
+        padding: 30px 0;
+    }
+    .lenders-block {
+        padding: 30px 0;
+        background: #fff;
+    }
+}
+@media screen and (max-width:440px){
+    .image-container{
+        text-align: center;
+        width: 100%;
+        box-shadow: none;
+    }
+    .e-block {
+        padding: 30px 0;
+        background: #fff;
+    }
+    .d-block {
+        padding: 30px 0;
+        background: #eee;
+    }
+    .banner-caption {
+        bottom: -35px;
+    }
+    .banner h1 {
+        font-size: 30px;
+    }
+    .compare-block {
+        padding: 30px 0;
+    }
+    .t-w-h-block > li:after {
+        content: "";
+        display: none;
+    }
+    h1.half-block-title {
+        font-size: 18px;
+        color: #484848;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .benefits-card {
+        width: 100%;
+    }
+    .footer {
+        padding: 30px 0;
+    }
+    .social-icon-footer{
+        text-align: center !important;
+    }
+    .sub-footer p{
+        text-align: center;
+    }
+    .contact-inner-block.ng-scope {
+        padding: 30px 0;
+    }
+    .query-contact-block {
+        padding: 30px 0;
+        background: #eee;
+    }
+    .c-block ul > li, .d-block ul > li, .e-block ul > li {
+        margin-bottom: 0px; 
+        padding-left: 24px;
+        background-size: 12px auto;
+        font-size: 12px;
+    }
+    li.process-box-partners {
+        margin: 15px 5px;
+        font-size: 12px;
+    }
+    .banner p {
+        font-size: 14px;
+    }
+    .about-loan-block p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .about-loan-block h3 {
+        font-size: 18px;
+    }
+    ul.check-list > li {
+        float: left;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        background: url(../../assets/images/tick-inside-circle.png) no-repeat left 3px;
+        background-size: 12px auto;
+        font-size: 12px;
+        color: #6a6a78;
+        font-weight: 400;
+    }
+    .borrowrs-block {
+        padding: 30px 0;
+    }
+    ul.check-list > li p {
+        font-size: 12px;
+        line-height: 20px;
+        color: #444;
+        margin: 0;
+    }
+    .channel-partner-block {
+        padding: 30px 0;
+        background: #eee;
+    }
+    .custom-card p {
+        font-size: 12px;
+        color: #757272;
     }
 }
