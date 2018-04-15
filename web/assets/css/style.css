@@ -961,7 +961,7 @@ ul.about-benefits-list {
     box-shadow: 9px 9px 5px rgba(0, 0, 0, 0.19);
     width: 80%;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:767px){
     .topNavbar {
         position: fixed;
     }
