@@ -96,24 +96,28 @@
             <h1 class="half-block-title">EMI Calculator</h1>
             <div class="calc-box" data-aos="fade-left">
                 <div class="row">
+                    
+                    <form name=calc method=POST>
                     <div class="col-md-12">
-                        <div class="result-block text-right">
-                            <h3>EMI</h3>
-                            <p>&nbsp;&nbsp;</p>
+                        <input type="number" name="loan" class="form-control" placeholder="Loan Amount">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="number" name="months"  class="form-control" placeholder="Tenure in Months">
+                    </div>
+                    <div class="col-md-12">
+                        <input type="number"  name="rate" class="form-control" placeholder="Interest Rate(%)">
+                    </div>
+                    <div class="col-md-12">
+                            <label>Monthly Payment</label>
+                            <input type="number" name="pay" disabled="" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <button onClick='showpay()' class="btn btn-default">Calculate</button>
+                    </div>
+                      <div class="col-md-6">
+                            <button class="btn btn-default" type="reset" value="Reset">Reset</button>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Loan Amount">
-                    </div>
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Tenure in Months">
-                    </div>
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Interest Rate(%)">
-                    </div>
-                    <div class="col-md-12">
-                        <button class="btn btn-default">Calculate</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
