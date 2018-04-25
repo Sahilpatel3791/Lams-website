@@ -16,8 +16,6 @@ $(window).scrollTop(0);
             <div class="carousel-caption">
                <center> 
                  <p><h3><b>One form for all your financial requirements</b></h3></p>
-                <p><h3><b>Bank on our financial system</b></h3></p>
-               
                 <a class="btn brdr-btn" href="http://13.127.242.190:8080/#!/login">Apply for loan</a></center>
             </div>
         </div>
@@ -134,15 +132,15 @@ $(window).scrollTop(0);
                         </div>
                         <div class="col-md-12">
                             <label>Loan Amount</label>
-                            <input type="number" type=text name=loan class="form-control">
+                            <input type="number" type=text name=loan class="form-control" min="0" required>
                         </div>
                         <div class="col-md-6">
                             <label>Tenure in Months</label>
-                            <input type="number" name=months class="form-control">
+                            <input type="number" name=months class="form-control" min="0" required>
                         </div>
                         <div class="col-md-6">
                             <label>Interest Rate(%)</label>
-                            <input type="number" name=rate class="form-control">
+                            <input type="number" name=rate class="form-control" min="0" step="0.01" required>
                         </div>
                         <div class="col-md-12">
                             <label>Monthly Payment</label>
