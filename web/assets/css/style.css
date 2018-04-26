@@ -8,6 +8,22 @@ html,body{
     overflow-x: hidden;
 }
 /**********navbar**********/
+a.float-btn.ng-scope {
+    height: 50px;
+    width: 50px;
+    display: block;
+    background: #83b358;
+    position: fixed;
+    top: 15%;
+    right: 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 26px;
+    padding: 12px;
+    color: white;
+    z-index: 100;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+}
 .item img:after{
     content: "";
     position: absolute;
