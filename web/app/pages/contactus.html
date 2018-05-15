@@ -1,7 +1,7 @@
 <script>
-$(document).ready(function(){
-$(this).scrollTop(0);
-});
+    $(document).ready(function () {
+        $(this).scrollTop(0);
+    });
 </script>
 <div class="banner contact">
     <div class="overlay"></div>
@@ -12,7 +12,7 @@ $(this).scrollTop(0);
         </div>
     </div>
 </div>
-<div class="contact-inner-block">
+<div class="contact-inner-block" ng-controller="mailCtrl">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -24,26 +24,50 @@ $(this).scrollTop(0);
                 </ul>
             </div>
             <div class="col-md-6">
-                <form class="contact-form">
+                <form class="contact-form" ng-submit="sendMail()">
                     <div class="row">
                         <div class="col-md-6">
-                            <input id="fname" type="text" class="form-control" placeholder="Full Name*" required>
+                            <input id="fname" type="text" class="form-control" ng-model="mailModel.name" placeholder="Full Name*" required>
                         </div>
                         <div class="col-md-6">
-                            <input id="email" type="email" placeholder="Email*" class="form-control" required>
+                            <input id="email" type="email" placeholder="Email*" ng-model="mailModel.email" class="form-control" required>
                         </div>
                         <div class="col-md-12">
-                            <input id="number" type="number" class="form-control" placeholder="Phone Number*" required>
+                            <input id="number" type="number" class="form-control" ng-model="mailModel.contact" placeholder="Phone Number*" required>
                         </div>
                         <div class="col-md-12">
-                            <textarea id="msg" class="form-control" placeholder="Message*" rows="8" required></textarea>
+                            <textarea id="msg" class="form-control" placeholder="Message*" ng-model="mailModel.msg" rows="8" required></textarea>
                         </div>
                         <div class="col-md-12">
-                            <button class="btn btn-default sbmt-btn">Submit</button>
+                            <button type="submit" class="btn btn-default sbmt-btn">Submit</button>
                         </div>
-                    </div>
                 </form>
             </div>
+                    
+                    <div class="row" ng-show="showMsg" style="margin-top: 20px">
+        <div class="alert alert-success">
+            <strong>Email sent successfully.</strong> Thank you.
+        </div>
+    </div>
         </div>
     </div>
 </div>
+
+</div>
+
+<script>
+//var app = angular.module('myApp', []);
+    lams.controller('mailCtrl', function ($scope, $http) {
+
+        $scope.sendMail = function () {
+            $http({
+                method: 'POST',
+                url: 'http://13.127.242.190:8181/lams/sendMailRequestFromSite',
+                data: $scope.mailModel,
+                headers: {'Content-Type': 'application/json', 'token': '3c4aef63-67ce-40d8-9942-a1a83481a677'}
+            });
+            $scope.showMsg = true;
+        }
+
+    });
+</script>

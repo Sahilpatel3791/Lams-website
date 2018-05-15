@@ -194,37 +194,64 @@ $(window).scrollTop(0);
         </div>
     </div>
 </div>
-<div class="contact-block">
+<div class="contact-inner-block" ng-controller="mailCtrl">
     <div class="container">
         <div class="row">
-            <div class="col-md-6" data-aos="fade-right">
+            <div class="col-md-6">
                 <h1 class="half-block-title">Contact us</h1>
                 <p class="sub-title">We are here to solve all your queries. We will get back to you as soon as we can.</p>
+                <ul class="list-unstyled contact-footer">
+                    <li><i class="fa fa-whatsapp"></i>&nbsp;&nbsp;+91 9769572214 / +91 9821288122</li>
+                    <li><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;info@vfinances.in</li>
+                </ul>
             </div>
-            <div class="col-md-6" data-aos="fade-left">
-                <form class="contact-form">
+            <div class="col-md-6">
+                <form class="contact-form" ng-submit="sendMail()">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Full Name*" required>
+                            <input id="fname" type="text" class="form-control" ng-model="mailModel.name" placeholder="Full Name*" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" placeholder="Email*" class="form-control" required>
+                            <input id="email" type="email" placeholder="Email*" ng-model="mailModel.email" class="form-control" required>
                         </div>
                         <div class="col-md-12">
-                            <input type="number" class="form-control" placeholder="Phone Number*" required>
+                            <input id="number" type="number" class="form-control" ng-model="mailModel.contact" placeholder="Phone Number*" required>
                         </div>
                         <div class="col-md-12">
-                            <textarea class="form-control" placeholder="Message*" rows="8" required></textarea>
+                            <textarea id="msg" class="form-control" placeholder="Message*" ng-model="mailModel.msg" rows="8" required></textarea>
                         </div>
                         <div class="col-md-12">
-                            <button class="btn btn-default sbmt-btn">Submit</button>
+                            <button type="submit" class="btn btn-default sbmt-btn">Submit</button>
                         </div>
-                    </div>
                 </form>
             </div>
+                           
+                    <div class="row" ng-show="showMsgonHome" style="margin-top: 20px">
+        <div class="alert alert-success">
+            <strong>Email sent successfully.</strong> Thank you.
+        </div>
+    </div>
         </div>
     </div>
 </div>
+
+</div>
+        
+ <script>
+    lams.controller('mailCtrl', function ($scope, $http) {
+
+        $scope.sendMail = function () {
+            $http({
+                method: 'POST',
+                url: 'http://13.127.242.190:8181/lams/sendMailRequestFromSite',
+                data: $scope.mailModel,
+                headers: {'Content-Type': 'application/json', 'token': '3c4aef63-67ce-40d8-9942-a1a83481a677'}
+            });
+            $scope.showMsgonHome = true;
+        }
+
+    });
+</script>
 <!--<div class="partners-block">
     <div class="container">
         <div class="row">
