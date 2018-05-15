@@ -24,7 +24,7 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <form class="contact-form" ng-submit="sendMail()">
+                <form id="submitForm" class="contact-form" ng-submit="sendMail()">
                     <div class="row">
                         <div class="col-md-6">
                             <input id="fname" type="text" class="form-control" ng-model="mailModel.name" placeholder="Full Name*" required>
@@ -57,6 +57,7 @@
 
 <script>
 //var app = angular.module('myApp', []);
+
     lams.controller('mailCtrl', function ($scope, $http) {
 
         $scope.sendMail = function () {
@@ -67,7 +68,8 @@
                 headers: {'Content-Type': 'application/json', 'token': '3c4aef63-67ce-40d8-9942-a1a83481a677'}
             });
             $scope.showMsg = true;
+            $scope.mailModel = {};
         }
-
     });
+    
 </script>
